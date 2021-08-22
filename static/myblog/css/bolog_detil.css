@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.box{
+    width: 90%;
+    display:inline-block;
+    margin: 40px  80px 10%;
+    box-shadow:0  27px 87px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+    overflow: hidden;
+}
+.datetime{
+    color: rgb(230, 7, 7) ;
+    margin-top: 20px;
+}
+.datetime span{
+    padding-left: 20px;
+}
+
+.box-img{
+    float: left;
+    width:42%;
+}
+.box-text{
+    width: 100%;
+    float: left;
+    padding-left: 35px;
+
+}
+.box-text h1{
+    font-style: 48px;
+    text-align: center;
+    font-weight: bold;
+    color: #ff0202;
+    margin-bottom: 45px;
+    margin-top: 10px;
+}
+/*  
+.box-text span{
+    
+    color: darkgrey;
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    
+}*/
+.box-text p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0.25px;
+    margin-bottom: 15px;
+}
+.sitingg{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.sitingg button{
+    margin-left: 750px;  
+   /* margin-top: 50px; */
+}
+.sitingg span{
+    font-size: 18px;
+}
+
+.sitingg i {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(21, 39, 39);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 15px 0 0;
+}
+.sitingg i:hover {
+    background-color:#441b1b;
+}
+/* .like_post{
+    padding-left: 850px;
+    
+
+} */
+.comment_post h2{
+    text-align: center;
+    color:#ff0202; 
+
+
+}
+.comment_post i{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(21, 39, 39);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 15px 0 0;
+
+}
+/* defhdjkdjk  */

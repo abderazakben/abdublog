@@ -1,0 +1,31 @@
+{% extends 'base.html'  %}
+{% block title%}edit Profile Page{%  endblock %}
+{% block content %}
+
+{% if user.is_authenticated   %}
+       {% if user.id == profile.user.id %}
+            <h1>Edit Profile...</h1>
+            <br>
+            <div class="form-group">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button class="btn btn-outline-secondary">Updat profil Page</button>
+                </form>
+                </div>
+
+        {% else%}
+        <h1>You are not the correct User To user Edit This Page</h1>
+        {% endif  %}
+{% else %}    
+  <h1> You're  not allowed here! (and you know it .....)</h1> 
+{% endif %}      
+
+
+
+
+
+
+
+
+{% endblock  %}

@@ -1,0 +1,18 @@
+{% extends 'base.html'  %}
+{% block title%}Home{%  endblock %}
+{% block content %}
+{% if category_posts  %}
+    <h1>{{ cats }} Category</h1>
+    {% for post in category_posts  %}
+    <h6><a class="btn btn-info" href="{% url 'myblog:article_detaile' post.pk%}">{{post.title}}</a></h6><br>
+    <h6>  {{post.author.first_name}}  - {{post.author.last_name}} | {{post.post_date}}</h6>
+    <h6>{{post.body|slice:":200"|safe}}</h6>
+    {% if user.is_authenticated   %}
+    <a class="btn btn-primary" href="{% url 'myblog:updet_post' post.pk  %}">Edit Post</a>
+    <a class="btn btn-primary" href="{% url 'myblog:delete_post' post.pk  %}">Delet Post</a>
+{% endif %}   
+{% endfor  %}
+{% else %}
+    <h2>Soruy This page does not exist</h2>
+{% endif%}
+{% endblock %}

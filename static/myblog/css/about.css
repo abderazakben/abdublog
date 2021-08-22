@@ -1,0 +1,95 @@
+/* .abouttest{
+    width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-image: url(bg3.jpg);
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+	padding: 0
+} */
+.about-us{
+    background-color: rgb(85, 84, 84);
+    color: rgb(14, 14, 14);
+    font-family: 'Montserrat', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	flex-direction: column;
+}
+.who-we-are{
+    display: flex;
+    color: blanchedalmond;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.who-we-are span{
+	width: 60%;
+	align-items: center;
+text-align: center;
+}
+.cards{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin:10px;
+	flex-wrap: wrap;
+}
+.card-img{
+	border-radius: 5px;
+}
+.cards .card{
+	width: 16rem;
+	margin: 20px;
+}
+.card p{
+	font-size: 14px;
+}
+.social-media{
+	width: 90%;
+	display: flex;
+	justify-content: flex-end;
+}
+.social-media i{
+	margin:10px;
+}
+.active{
+	border-bottom: 1px solid #fff;
+}
+.card-img1{
+	width: 100%;
+	height: 12rem;
+	background-image: url('01.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+.card-img2{
+	width: 100%;
+	height: 12rem;
+	background-image: url('02.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+.card-img3{
+	width: 100%;
+	height: 12rem;
+	background-image: url('03.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+.card-img4{
+	width: 100%;
+	height: 12rem;
+	background-image: url('04.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+.logo{
+	font-family: 'Dancing Script',cursive;
+	font-size: 24px;
+}

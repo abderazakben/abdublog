@@ -1,0 +1,101 @@
+{% extends 'base.html'  %}
+{% load static %}
+{% block title%}Home{%  endblock %}
+{% block content %}
+
+<!-- recherch boton  -->
+<!--test post desing-->
+<div class="container">
+{% for post in object_list %}
+<div class="container main-container">
+  <div class="row main-row">
+    <div class="col-lg-4 col-md-12 col-sm-12">
+      <div class="blog-img">
+        {% if post.header_image %}
+             <img  src="{{post.header_image.url}}" alt="nature"  class="img-fluid">
+          {% else %}
+          <img src="{% static 'myblog/images/images-test.png'  %}" alt="nature" class="img-fluid">   
+         
+         {% endif  %} 
+      <!--   <img src="{% static 'myblog/images/images-test.png'  %}" alt="nature" class="img-fluid">-->
+      </div>
+    </div>
+  
+    <div class="col-lg-8 col-md-12 col-sm-12">
+      <div class="blog-title">
+        <h3><a class="title" href="{% url 'myblog:article_detaile' post.pk %}">{{post.title}}</a></h3>
+      </div>
+      <div class="blog-date">
+        <i class="fas fa-id-card"><span>{{post.author.first_name}} {{post.author.last_name}}</span></i>
+
+        <i class="far fa-calendar-minus"><span>{{post.post_date}}</span></i> 
+        <i class="fas fa-book "><span><a href="{% url 'myblog:category' post.category|slugify %}">{{post.category}} </a> </span></i>
+        <i class="fas fa-heart" ><span>{{post.total_likes}}</span></i>
+      </div>
+      <div class="blog-desc">
+        <p>
+          {{post.snipped}}
+        </p> 
+      </div>
+      
+      <div class="blog-read-more">
+        <h6><a class="btn btn-outline-dark" href="{% url 'myblog:article_detaile' post.pk%}">{{post.title}}</a></h6><br>
+        <!--
+        <button class="btn btn-outline-dark">Read More</button>-->
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+{% endfor  %}
+<!--fin post desing-->
+
+<!--
+{% for post in object_list %}
+- {{post.total_likes}} Likes
+   <h6><a class="btn btn-info" href="{% url 'myblog:article_detaile' post.pk%}">{{post.title}}</a></h6><br>
+   <h6><a href="{% url 'myblog:category' post.category|slugify %}"> {{post.category}} </a>{{post.author.first_name}}  - {{post.author.last_name}} | {{post.post_date}}</h6>
+   
+   <h6>{{post.body|slice:":200"|safe}}</h6>
+     {{post.snipped}}<br>
+   {% if user.is_authenticated   %}
+          {% if  user.id == post.author.id%}
+            <a class="btn btn-primary" href="{% url 'myblog:updet_post' post.pk  %}">Edit Post</a>
+            <a class="btn btn-primary" href="{% url 'myblog:delete_post' post.pk  %}">Delet Post</a>
+         {% endif  %}   
+   {% endif %}   
+{% endfor  %}
+-->
+
+{% if  page_obj.has_other_pages %}
+<div class="container">
+<div class="row">
+<nav aria-label="Page navigation example " >
+  <ul class="pagination">
+    {% if page_obj.has_previous %}
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+    {% else %}  
+    <li class="disables"></li>
+    {% endif %}
+    {% for pages in page_obj.paginator.page_range %}
+          {% if page_obj.number == pages %}
+             <li class="page-item"><a class="page-link current" href="">{{pages}}</a> </li>
+          {% else %}
+          <li class="page-item"><a class="page-link current" href="?page={{pages}}">{{pages}}</a></li>
+          {% endif %}   
+
+    {% endfor %}
+
+   
+    {% if page_obj.has_next %}
+    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+    <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a></li>
+    {% endif  %}
+  </ul>
+</nav>
+</div>
+</div>
+{% endif %}
+
+{% endblock %}

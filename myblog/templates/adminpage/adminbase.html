@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Home Admin {% endblock %}</title>
+        
+         <link rel="stylesheet" type="text/css" href="{% static 'myblog/css/mainepage.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'myblog/css/style.css' %}"> 
+        <link rel="stylesheet" type="text/css" href="{% static 'myblog/css/folter.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'myblog/css/bolog_detil.css' %}">
+       <link rel="stylesheet" href="{% static 'myblog/css/styleadmin.css' %}">
+       <link rel="stylesheet" type="text/css" href="{% static 'myblog/css/liststyl.css' %}">
+      
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+       
+      <script>
+            $(function() {
+            $(".toggle").on("click", function() {
+                if ($(".item").hasClass("active")) {
+                    $(".item").removeClass("active");
+                } else {
+                    $(".item").addClass("active");
+                }
+            });
+        });
+       
+
+   
+   </script> 
+    </head>
+   
+
+<body>
+ 
+    <nav>
+        <ul class="menu">
+            
+            <li class="logo"><img src="{% static 'myblog/images/logo_mastare.png'  %}"  width="60pox"  height="60px" alt="nature" class="logo"></li>
+            <li class="item">  <i class="fas fa-home"></i><a href="{% url 'myblog:adminhome'  %}" >Home</a></li>
+          
+            {% if user.is_authenticated   %}
+            <li class="item"><i class="fas fa-plus-square"></i><a href="{% url 'myblog:add_post'  %} " target="_blank" > Add Post</a></li>
+            <li class="item"> <i class="fas fa-folder-plus"></i><a href="{% url 'myblog:add_category'  %}" target="_blank" > Add Category</a></li>
+            
+            {% endif %}
+            <li class="item"> <i class="fas fa-question-circle"></i><a href="{% url 'myblog:motaki_dris'  %}" target="_blank" > Help</a></li>
+           
+            
+            <li class="item"><i class="fas fa-eye"></i><a href="{% url 'myblog:home'   %}" target="_blank">Veset site</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+
+ 
+
+  
+        {% block content%}
+
+
+
+
+        {% endblock %}
+
+
+        <footer>
+            <div class="containeree">
+                <div class="ftr">
+                    <h3>About</h3>
+                    <ul class="containeree">
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Work</a></li>
+                    </ul>
+                </div>
+                <div class="ftr">
+                    <h3>Contact</h3>
+                    <ul class="containeree">
+                        <li><a href="#">info@gmail.com</a></li>
+                        <li><a href="#">(707) 322-22-322</a></li>
+                        <li><a href="#">Richmond,VA,2203</a></li>
+                    </ul>
+                </div>
+                <div class="ftr">
+                    <h3>Social</h3>
+                    <ul class="containeree">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="ftr">
+                    <h3>Join Our Newsletter</h3>
+                    <form action="#">
+                        <input type="email" placeholder="Enter Your Email." required>
+                        <div class="btn">
+                            <input type="submit" value="Subscribe">
+                        </div>
+                    </form>
+                </div>
+    
+            </div>
+        </footer>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+
+</html>

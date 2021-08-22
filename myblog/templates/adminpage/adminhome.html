@@ -1,0 +1,128 @@
+{% extends "adminpage/adminbase.html" %}
+{% load static %}
+{% block title %} Admin Home  {% endblock %}
+
+{% block content %}
+
+ <!-- stsrte servece-->
+ <div class="container">
+ <div class="services-section">
+  <div class="inner-width">
+    <h1 class="section-title">Semestre 8</h1>
+    <div class="border"></div>
+    <div class="services-container">
+
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-user-graduate"></i>
+          
+        </div>
+        <div class="service-title"> Mr.ZANATI Driss</div>
+        <div class="service-desc">
+          <a class="test" href="{% url 'myblog:motaki_dris'  %}">Système Bancaire Participatif</a>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <div class="service-title">Mr.EL MOUTAQUI Badreddin</div>
+        <div class="service-desc">
+         <a class="test" href="{% url 'myblog:motaki_dris'  %}">Economie Politique Islamique</a>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <div class="service-title">Mr.Profe </div>
+        <div class="service-desc">
+         <a  href="{% url 'myblog:motaki_dris'  %}"> Gestion de Portefeuille D'actifs Financiers</a>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <div class="service-title">Mr.Prof</div>
+        <div class="service-desc">
+         <a  href="{% url 'myblog:motaki_dris'  %}"> Produits Dèrivès Et Stratègies De Couverture</a> 
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <div class="service-title">Mr. El ASSRI LAILA</div>
+        <div class="service-desc">
+         <a  href="{% url 'myblog:motaki_dris'  %}"> GRH Et MANAGEMENT INTERCULTUREL</a>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <div class="service-title">Mr.TABAA YSSINE</div>
+        <div class="service-desc">
+         <a href="{% url 'myblog:motaki_dris'  %}">SYSTÈME D'INFORMATION EN FINANCE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+ <!-- end servece-->
+<!-- start list   -->
+<!-- end list  -->
+
+            {% for post in cat_menu_admin %}
+            <div class="container main-container">
+              <div class="row main-row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="blog-img">
+                    {% if post.header_image %}
+                         <img  src="{{post.header_image.url}}" alt="nature" class="img-fluid">
+                      {% else %}
+                      <img src="{% static 'myblog/images/images-test.png'  %}" alt="nature" class="img-fluid">   
+                     
+                     {% endif  %} 
+                  <!--   <img src="{% static 'myblog/images/images-test.png'  %}" alt="nature" class="img-fluid">-->
+                  </div>
+                </div>
+              
+                <div class="col-lg-8 col-md-12 col-sm-12">
+                  <div class="blog-title">
+                    <h3><a class="title" href="{% url 'myblog:article_detaile' post.pk%}">{{post.title}}</a></h3>
+                  </div>
+                  <div class="blog-date">
+                    <i class="fas fa-id-card"><span>{{post.author.first_name}} {{post.author.last_name}}</span></i>
+            
+                    <i class="far fa-calendar-minus"><span>{{post.post_date}}</span></i> 
+                    <i class="fas fa-book "><span><a href="{% url 'myblog:category' post.category|slugify %}">{{post.category}} </a> </span></i>
+                    <i class="fas fa-heart" ><span>{{post.total_likes}}</span></i>
+                  </div>
+                  <div class="blog-desc">
+                    <p>
+                      {{post.snipped}}
+                    </p> 
+                  </div>
+                  
+                  <div class="blog-read-more">
+                    <h6><a class="btn btn-outline-dark" href="{% url 'myblog:article_detaile' post.pk%}">{{post.title}}</a></h6><br>
+                    <!--
+                    <button class="btn btn-outline-dark">Read More</button>-->
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            {% endfor  %}
+{% endblock%}
+
+
+

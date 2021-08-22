@@ -1,0 +1,246 @@
+{% extends "adminpage/adminbase.html" %}
+{% load static %}
+{% block title %} Admin Home  {% endblock %}
+
+{% block content %} 
+
+<div class="optionsDiv">
+  Filter By Course and Expose
+  <select id="selectField">
+      <option value="All" selected>All</option>
+      <option value="Student">Système Bancaire Part..</option>
+      <option value="Assistant">Economie Politique Islamique</option>
+      <option value="Professor">GRH Et MANAGEMENT INTERCULTUREL</option>
+      <option value="Professor2">Auter Chose </option>
+  </select>
+</div>
+<table id="myTable">
+  <tr id="HeadRow">
+      <td> Name De Expose</td>
+      <td>N° Gourep</td>
+      <td>Download Fille </td>
+      <td>Coure</td>
+  </tr>
+
+  <tr position="Student">
+      <td>les organismes internationux acteurs de la finace</td>
+      <td>Nomber 1</td>
+      <td><a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+      <td>Courculer : 103.12 <a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+  </tr>
+  <tr position="Student">
+    <td>les organismes internationux acteurs de la finace</td>
+    <td>Nomber 2</td>
+    <td><a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+    <td>Courculer : 103.12 <a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+</tr>
+<tr position="Student">
+  <td>les organismes internationux acteurs de la finace</td>
+  <td>Nomber 3</td>
+  <td><a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+  <td>Courculer : 103.12 <a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+</tr>
+<tr position="Student">
+  <td>les organismes internationux acteurs de la finace</td>
+  <td>Nomber 4</td>
+  <td><a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+  <td>Courculer : 103.12 <a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+</tr>
+<tr position="Student">
+  <td>les organismes internationux acteurs de la finace</td>
+  <td>Nomber 5</td>
+  <td><a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+  <td>Courculer : 103.12 <a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+</tr>
+<tr position="Student">
+  <td>les organismes internationux acteurs de la finace</td>
+  <td>Nomber 6</td>
+  <td><a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+  <td>Courculer : 103.12 <a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+</tr>
+<tr position="Student">
+  <td>les organismes internationux acteurs de la finace</td>
+  <td>Nomber 7</td>
+  <td><a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+  <td>Courculer : 103.12 <a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+</tr>
+<tr position="Student">
+  <td>les organismes internationux acteurs de la finace</td>
+  <td>Nomber 8</td>
+  <td><a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+  <td>Courculer : 103.12 <a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+</tr>
+v <tr position="Student">
+  <td>les organismes internationux acteurs de la finace</td>
+  <td>Nomber 9</td>
+  <td><a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+  <td>Courculer : 103.12 <a href="{% static 'myblog/course/abdu.pdf'  %} " download=""><i class="fas fa-cloud-download-alt" style="color: slategrey;"></i></a></td>
+</tr>
+
+
+  <tr position="Assistant">
+      <td>Timmy</td>
+      <td>Timmy's Last name</td>
+      <td>22</td>
+      <td>Assistant</td>
+  </tr>
+
+  <tr position="Professor">
+      <td>Billy</td>
+      <td>Billy's Last name</td>
+      <td>40</td>
+      <td>Professor</td>
+  </tr>
+  <tr position="Professor2">
+    <td>Billy</td>
+    <td>Billy's Last name</td>
+    <td>40</td>
+    <td>Professor</td>
+</tr>
+
+  <tr position="Professor">
+      <td>Eddy</td>
+      <td>Eddy's Last name</td>
+      <td>35</td>
+      <td>Professor</td>
+  </tr>
+
+  <tr position="Professor">
+      <td>Emma</td>
+      <td>Emma's Last name</td>
+      <td>38</td>
+      <td>Professor</td>
+  </tr>
+
+  <tr position="Student">
+      <td>Emily</td>
+      <td>Nomber 10</td>
+      <td>10</td>
+      <td>Student</td>
+  </tr>
+
+  <tr position="Assistant">
+      <td>Jack</td>
+      <td>Jack's Last name</td>
+      <td>30</td>
+      <td>Assistant</td>
+  </tr>
+
+  
+
+  <tr position="Assistant">
+      <td>Danny</td>
+      <td>Danny's Last name</td>
+      <td>37</td>
+      <td>Assistant</td>
+  </tr>
+
+  <tr position="Professor">
+      <td>Erick</td>
+      <td>Erick's Last name</td>
+      <td>42</td>
+      <td></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<h4>Get Your Pregect</h4>
+<!-- get youre pregect  -->
+<button class="accordion">Project 1</button>
+	<div class="panel">
+    <span>Name : abdu ben</span><br>
+    <span>Name Your Progect</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <hr>
+    <h5>commene</h5>
+    <h6>abdu</h6>
+    <br/>
+    <h6>cbchfg jdjdhdh jdhgdj gdjdghd jdegdj </h6>
+    <hr>
+	</div>
+
+  <button class="accordion">Project 2</button>
+	<div class="panel">
+    <span>Name : abdu ben</span><br>
+    <span>Name Your Progect</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <hr>
+    <h5>commene</h5>
+    <h6>abdu</h6>
+    <br/>
+    <h6>cbchfg jdjdhdh jdhgdj gdjdghd jdegdj </h6>
+    <hr>
+	</div>
+  <button class="accordion">Project 3</button>
+	<div class="panel">
+    <span>Name : abdu ben</span><br>
+    <span>Name Your Progect</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <hr>
+    <h5>commene</h5>
+    <h6>abdu</h6>
+    <br/>
+    <h6>cbchfg jdjdhdh jdhgdj gdjdghd jdegdj </h6>
+    <hr>
+	</div>
+<!-- end fin -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <script>
+    $(document).ready(function() {
+    
+    function addRemoveClass(theRows) {
+    
+        theRows.removeClass("odd even");
+        theRows.filter(":odd").addClass("odd");
+        theRows.filter(":even").addClass("even");
+    }
+    
+    var rows = $("table#myTable tr:not(:first-child)");
+    
+    addRemoveClass(rows);
+    
+    
+    $("#selectField").on("change", function() {
+    
+        var selected = this.value;
+    
+        if (selected != "All") {
+    
+            rows.filter("[position=" + selected + "]").show();
+            rows.not("[position=" + selected + "]").hide();
+            var visibleRows = rows.filter("[position=" + selected + "]");
+            addRemoveClass(visibleRows);
+        } else {
+    
+            rows.show();
+            addRemoveClass(rows);
+    
+        }
+    
+    });
+    });
+    var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		    acc[i].addEventListener("click", function() {
+		        /* Toggle between adding and removing the "active" class,
+		        to highlight the button that controls the panel */
+		        this.classList.toggle("active");
+
+		        /* Toggle between hiding and showing the active panel */
+		        var panel = this.nextElementSibling;
+		        if (panel.style.display === "block") {
+		            panel.style.display = "none";
+		        } else {
+		            panel.style.display = "block";
+		        }
+		    });
+		}
+    </script>
+{% endblock %}

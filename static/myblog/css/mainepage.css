@@ -1,0 +1,150 @@
+
+.abdu{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Crimson Pro', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /*background: #646464;*/
+}
+.boxtt
+{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 40px;
+	background:#060c21;
+	transition:0.5s;
+}
+.boxtt:hover
+{
+	height: 400px;
+}
+.boxtt  .imgBx
+{
+	position: absolute;
+
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	padding: 44px;
+	box-sizing: border-box;
+}
+.boxtt  .imgBx img 
+{
+	max-width: 100%;
+	align-items: center;
+	opacity: 0.3;
+	transition: 0.5s;
+
+}
+
+.boxtt:hover  .imgBx img 
+{
+	opacity: 1;
+}
+
+.boxtt:before
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+    z-index: -1;
+
+}
+.boxtt:after
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+
+}
+.boxtt:before,
+.boxtt:after
+{
+	background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
+}
+
+.boxtt:nth-child(3):before,
+.boxtt:nth-child(3):after
+{
+	background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
+}
+
+.boxtt:nth-child(4):before,
+.boxtt:nth-child(4):after
+{
+	background: linear-gradient(235deg,#772aff,#010615,#2196f3);
+}
+
+.boxtt .contentll 
+{
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	height: 90px;
+	background : rgba(0,0,0,0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: 0.5s;
+
+}
+
+.boxtt:hover .contentll
+{
+	opacity:1;
+} 
+
+.boxtt .contentll h2 
+{
+	font-size: 20px;
+	color: #fff;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 1px;
+}
+.boxtt .contentll h2 span 
+{
+	font-size: 14px;
+	color: #fff;
+	font-weight: 200;
+	letter-spacing: 2px;
+}
+
+.boxtt .contentll a
+{
+    font-size: 22px;
+    width: 15px;
+    color: #fff;
+    align-items: center;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-decoration: none;
+	background-color: #fc005d;
+}
+.boxtt .contentll a:hover
+{
+background-color: #09d3f7;	
+}
+
